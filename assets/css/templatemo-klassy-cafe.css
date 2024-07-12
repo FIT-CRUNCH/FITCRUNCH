@@ -1619,7 +1619,6 @@ responsive
   }
 }
 
-/* Desktop View */
 #preloader {
   overflow: hidden;
   background-color: #ECB13E;
@@ -1630,33 +1629,43 @@ responsive
   position: fixed;
   z-index: 99999;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #preloader .jumper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 50vw; /* Adjusted to make it responsive */
-  height: 50vh; /* Adjusted to make it responsive */
-  max-width: 500px; /* Max width for larger screens */
-  max-height: 500px; /* Max height for larger screens */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  height: 50px;
 }
 
 #preloader .jumper > div {
-  background-image: url(../images/preloader.svg);
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
   border-radius: 100%;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   position: absolute;
   opacity: 0;
-  width: 100%; /* Adjusted to make it responsive */
-  height: 100%; /* Adjusted to make it responsive */
-  -webkit-animation: jumper 5s 0s linear infinite;
-  animation: jumper 5s 0s linear infinite;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: jumper 1s 0s linear infinite;
+  animation: jumper 1s 0s linear infinite;
+}
+
+#preloader .jumper > div:nth-child(2) {
+  -webkit-animation-delay: 0.33333s;
+  animation-delay: 0.33333s;
+}
+
+#preloader .jumper > div:nth-child(3) {
+  -webkit-animation-delay: 0.66666s;
+  animation-delay: 0.66666s;
 }
 
 @-webkit-keyframes jumper {
@@ -1686,26 +1695,5 @@ responsive
   }
   100% {
     opacity: 0;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  #preloader {
-    align-items: center;
-    justify-content: center;
-  }
-
-  #preloader .jumper {
-    width: 40vw; /* Adjusted to make it responsive */
-    height: 40vh; /* Adjusted to make it responsive */
-    max-width: 1000px; /* Max width for mobile screens */
-    max-height: 1000px; /* Max height for mobile screens */
-  }
-
-  #preloader .jumper > div {
-	background-image: url(../images/preloaderm.svg);
-	width: 100%; /* Adjusted to make it responsive */
-	height: 100%; /* Adjusted to make it responsive */
   }
 }
