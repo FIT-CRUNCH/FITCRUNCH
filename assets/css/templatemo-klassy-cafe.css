@@ -1697,8 +1697,8 @@ responsive
   }
 
   #preloader .jumper {
-    width: 80vw; /* Adjusted to make it responsive */
-    height: 80vh; /* Adjusted to make it responsive */
+    width: 40vw; /* Adjusted to make it responsive */
+    height: 40vh; /* Adjusted to make it responsive */
     max-width: 1000px; /* Max width for mobile screens */
     max-height: 1000px; /* Max height for mobile screens */
   }
