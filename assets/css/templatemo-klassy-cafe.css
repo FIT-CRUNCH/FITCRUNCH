@@ -1619,7 +1619,7 @@ responsive
   }
 }
 
-
+/* Desktop View */
 #preloader {
   overflow: hidden;
   background-color: #ECB13E;
@@ -1659,16 +1659,6 @@ responsive
   animation: jumper 5s 0s linear infinite;
 }
 
-#preloader .jumper > div:nth-child(2) {
-  -webkit-animation-delay: 10.33333s;
-  animation-delay: 10.33333s;
-}
-
-#preloader .jumper > div:nth-child(3) {
-  -webkit-animation-delay: 10.66666s;
-  animation-delay: 10.66666s;
-}
-
 @-webkit-keyframes jumper {
   0% {
     opacity: 0;
@@ -1696,5 +1686,25 @@ responsive
   }
   100% {
     opacity: 0;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  #preloader {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #preloader .jumper {
+    width: 80vw; /* Adjusted to make it responsive */
+    height: 80vh; /* Adjusted to make it responsive */
+    max-width: 300px; /* Max width for mobile screens */
+    max-height: 300px; /* Max height for mobile screens */
+  }
+
+  #preloader .jumper > div {
+    width: 100%; /* Adjusted to make it responsive */
+    height: 100%; /* Adjusted to make it responsive */
   }
 }
