@@ -1704,7 +1704,8 @@ responsive
   }
 
   #preloader .jumper > div {
-    width: 100%; /* Adjusted to make it responsive */
-    height: 100%; /* Adjusted to make it responsive */
+	background-image: url(../images/preloaderm.svg);
+	width: 100%; /* Adjusted to make it responsive */
+	height: 100%; /* Adjusted to make it responsive */
   }
 }
